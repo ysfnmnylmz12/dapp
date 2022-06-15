@@ -1,8 +1,20 @@
+import { selectItemForUpgrade } from "../../store/actions/selectItemForUpgrade";
 import styles from "./Item.module.scss";
+import { useContext } from "react";
+import { MainContext } from "../../store";
+import { selectScrollForUpgrade } from "../../store/actions/selectScrollForUpgrade";
 
 const Item = ({ item, collectible }) => {
+  const { state, dispatch } = useContext(MainContext);
+  const selectHandler = (item) => {
+    if (!collectible) {
+      selectItemForUpgrade(dispatch, item);
+    } else {
+      selectScrollForUpgrade(dispatch, item.data.idList[Math.floor(Math.random() * item.data.idList.length)]);
+    }
+  };
   return (
-    <div className={styles.item}>
+    <div className={styles.item} onClick={() => selectHandler(item)}>
       <img src={`/${item.data.name}.jpg`} alt={item.data.name} />
       {collectible && <span className={styles.count}>{item.data.count}</span>}
       {!collectible && (

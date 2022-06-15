@@ -5,6 +5,17 @@ module.exports = async function (deployer) {
   let onlineInstance = await Online.deployed();
   await onlineInstance.mint("Raptor", 1, 97, "Very Slow", 100, 10, false);
   await onlineInstance.mint("Raptor", 1, 97, "Very Slow", 100, 10, false);
+  await onlineInstance.mint("Raptor", 1, 97, "Very Slow", 100, 10, false);
+  await onlineInstance.mint("Raptor", 1, 97, "Very Slow", 100, 10, false);
+  await onlineInstance.mint("Raptor", 1, 97, "Very Slow", 100, 10, false);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
+  await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
   await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
   await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
   await onlineInstance.mint("Bus", 0, 0, "", 0, 0, true);
